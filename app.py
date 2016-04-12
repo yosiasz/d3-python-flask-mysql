@@ -14,10 +14,10 @@ CORS(app)
 
 @app.before_request
 def db_connect():
-  g.conn = MySQLdb.connect(host='10.0.0.7',
-                              user='root',
-                              passwd='Semrina77',
-                              db='scheduler')
+  g.conn = MySQLdb.connect(host='mysql.ip.address',
+                              user='user.name',
+                              passwd='user.password',
+                              db='database.name')
   g.cursor = g.conn.cursor()
 
 @app.after_request
